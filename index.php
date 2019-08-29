@@ -29,22 +29,30 @@
         <th>Email</th>
     </tr>
     <?php
-        while($row = mysqli_fetch_assoc($result)){
+        // while($row = mysqli_fetch_assoc($result)){
             // echo "<tr>";
             // echo "<td>".$row["id"]."</td>";
             // echo "<td>".$row["name"]."</td>";
             // echo "<td>".$row["phone"]."</td>";
             // echo "<td>".$row["email"]."</td>";
             // echo "</tr>";
-            echo "<tr>";
-            echo "<td>{$row["id"]}</td>";
-            echo "<td>{$row['name']}</td>";
-            echo "<td>{$row['phone']}</td>";
-            echo "<td>{$row['email']}</td>";
-            echo "</tr>";
+            // echo "<tr>";
+            // echo "<td>{$row["id"]}</td>";
+            // echo "<td>{$row['name']}</td>";
+            // echo "<td>{$row['phone']}</td>";
+            // echo "<td>{$row['email']}</td>";
+            // echo "</tr>";
 
-        }
+        // }
     ?>
+    <?php while($row = mysqli_fetch_assoc($result)){ ?>
+        <tr>
+            <td><?php echo $row["id"];?></td>
+            <td><?php echo $row["name"];?></td>
+            <td><?php echo $row["phone"];?></td>
+            <td><?php echo $row["email"];?></td>
+        </tr>
+    <?php } ?>
 </table>
 </body>
 </html>
