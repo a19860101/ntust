@@ -55,6 +55,9 @@
             <td><?php echo $row["name"];?></td>
             <td><?php echo $row["phone"];?></td>
             <td><?php echo $row["email"];?></td>
+            <td>
+                <a href="delete.php?id=<?php echo $row["id"];?>">刪除</a>
+            </td>
         </tr>
     <?php } ?>
 </table>

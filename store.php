@@ -6,3 +6,4 @@
     $sql = "INSERT INTO students(name,phone,email)
     VALUES('$name','$phone','$email')";
     mysqli_query($conn,$sql);
+    header("location:index.php");
