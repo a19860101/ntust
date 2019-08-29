@@ -21,6 +21,9 @@
     </style>
 </head>
 <body>
+<nav>
+    <a href="create.php">新增資料</a>
+</nav>
 <table>
     <tr>
         <th>#</th>
@@ -44,6 +47,7 @@
             // echo "</tr>";
 
         // }
+        # https://github.com/a19860101/ntust
     ?>
     <?php while($row = mysqli_fetch_assoc($result)){ ?>
         <tr>
