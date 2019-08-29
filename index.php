@@ -3,9 +3,15 @@
     // include_once()
     // require();
     // require_once(  )
-    $sql = "SELECT * FROM students";
-    $result = mysqli_query($conn,$sql);
-
+    // $sql = "SELECT * FROM students";
+    // $result = mysqli_query($conn,$sql);
+    function showAll(){
+        global $conn;
+        $sql = "SELECT * FROM students";
+        $result = mysqli_query($conn,$sql);
+        return $result;
+    }
+    $result = showAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">
