@@ -1,7 +1,6 @@
 <?php
     include('conn.php');
     include('student.php');
-
     $stu = new Student;
     $row = $stu->showAll();
 ?>

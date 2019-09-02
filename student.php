@@ -9,4 +9,9 @@
             }
             return $row;
         }
+        function store($name,$phone,$email){
+            $sql = "INSERT INTO students(name,phone,email)
+            VALUES('$name','$phone','$email')";
+            mysqli_query($this->connect(),$sql);
+        }
     }
