@@ -1,17 +1,7 @@
 <?php
     include("conn.php");
-    // include_once()
-    // require();
-    // require_once(  )
-    // $sql = "SELECT * FROM students";
-    // $result = mysqli_query($conn,$sql);
-    function showAll(){
-        global $conn;
-        $sql = "SELECT * FROM students";
-        $result = mysqli_query($conn,$sql);
-        return $result;
-    }
-    $result = showAll();
+    include("function.php");
+    $row = showAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,34 +45,21 @@
         // }
         # https://github.com/a19860101/ntust
     ?>
-    <?php while($row = mysqli_fetch_assoc($result)){ ?>
+    <?php foreach($row as $r){ ?>
         <tr>
-            <td><?php echo $row["id"];?></td>
-            <td><?php echo $row["name"];?></td>
-            <td><?php echo $row["phone"];?></td>
-            <td><?php echo $row["email"];?></td>
+            <td><?php echo $r["id"];?></td>
+            <td><?php echo $r["name"];?></td>
+            <td><?php echo $r["phone"];?></td>
+            <td><?php echo $r["email"];?></td>
             <td>
-                <a href="delete.php?id=<?php echo $row["id"];?>" onclick="return confirm('確認刪除？')">刪除</a>
+                <a href="delete.php?id=<?php echo $r["id"];?>" onclick="return confirm('確認刪除？')">刪除</a>
             </td>
             <td>
-                <a href="edit.php?id=<?php echo $row["id"];?>">編輯</a>
+                <a href="edit.php?id=<?php echo $r["id"];?>">編輯</a>
             </td>
         </tr>
     <?php } ?>
-    <?php while($row = mysqli_fetch_assoc($result)){ ?>
-        <tr>
-            <td><?php echo $row["id"];?></td>
-            <td><?php echo $row["name"];?></td>
-            <td><?php echo $row["phone"];?></td>
-            <td><?php echo $row["email"];?></td>
-            <td>
-                <a href="delete.php?id=<?php echo $row["id"];?>" onclick="return confirm('確認刪除？')">刪除</a>
-            </td>
-            <td>
-                <a href="edit.php?id=<?php echo $row["id"];?>">編輯</a>
-            </td>
-        </tr>
-    <?php } ?>
+
 </table>
 </body>
 </html>
