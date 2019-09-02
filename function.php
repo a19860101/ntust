@@ -9,3 +9,9 @@
         }
         return $row;
     }
+    function store($name,$phone,$email){
+        global $conn;
+        $sql = "INSERT INTO students(name,phone,email)
+        VALUES('$name','$phone','$email')";
+        mysqli_query($conn,$sql);
+    }
