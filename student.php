@@ -14,4 +14,8 @@
             VALUES('$name','$phone','$email')";
             mysqli_query($this->connect(),$sql);
         }
+        function delete($id){
+            $sql = "DELETE FROM students WHERE id = {$id}";
+            mysqli_query($this->connect(),$sql);
+        }
     }
