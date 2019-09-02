@@ -24,4 +24,10 @@
             $sql = "DELETE FROM students WHERE id = {$id}";
             mysqli_query($this->connect(),$sql);
         }
+        function update($name,$phone,$email,$id){
+            $sql = "UPDATE students 
+                    SET name='$name',phone='$phone',email='$email' 
+                    WHERE id = {$id} ";
+            mysqli_query($this->connect(),$sql);
+        }
     }
