@@ -17,23 +17,12 @@
         $(function(){
             $.ajax({
                 url:'api.php',
+                data:{
+                    student:'all',
+                },
                 dataType:'json',
                 success(e){
                     console.log(e);
-                    $(e).each(function(){
-                        // let template = `
-                        //     <tr>
-                        //         <td>${this.id}</td>
-                        //         <td>${this.name}</td>
-                        //         <td>${this.email}</td>
-                        //         <td>${this.phone}</td>
-                        //     </tr>
-                        // `;
-                        let template = 
-                        "<tr><td>"+this.id+"</td><td>"+this.name+"</td><td>"+this.phone+"</td><td>"+this.email+"</td></tr>";
-                        
-                        $('.container').append(template);
-                    })
                 }
             })
         })

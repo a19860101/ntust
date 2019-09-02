@@ -3,5 +3,10 @@
     include('student.php');
 
     $student = new Student;
-    $row = $student->showAll();
-    echo json_encode($row);
+    
+    if(isset($_GET["student"])&&$_GET["student"]=='all'){
+        $row = $student->showAll();
+        echo json_encode($row);
+    }
+    
+  
