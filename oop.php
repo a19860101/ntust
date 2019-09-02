@@ -1,11 +1,19 @@
 <?php
     class Student {
-        public $a = 100;
+        private $a = 100;
         public $b = 99;
         function test(){
             return $this->a + $this->b;
         }
     }
 
-    $test = new Student;
-    echo $test->test();
+    class Teacher extends Student{
+
+    }
+    $t = new Student;
+    echo $t->test();
+
+    // $test = new Teacher;
+    // echo $test->a;
+    // echo $test->test();
+
