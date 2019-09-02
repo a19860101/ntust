@@ -1,6 +1,11 @@
 <?php
-    function test($x=0,$y=0){
-        return $x + $y;
+    function showAll(){
+        global $conn;
+        $sql = "SELECT * FROM students";
+        $result = mysqli_query($conn,$sql);
+        $row = array();
+        while($rows = mysqli_fetch_assoc($result)){
+            $row[] = $rows;
+        }
+        return $row;
     }
-    echo test();
-    echo test(10,20);
