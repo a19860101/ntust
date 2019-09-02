@@ -27,24 +27,6 @@
         <th>Phone</th>
         <th>Email</th>
     </tr>
-    <?php
-        // while($row = mysqli_fetch_assoc($result)){
-            // echo "<tr>";
-            // echo "<td>".$row["id"]."</td>";
-            // echo "<td>".$row["name"]."</td>";
-            // echo "<td>".$row["phone"]."</td>";
-            // echo "<td>".$row["email"]."</td>";
-            // echo "</tr>";
-            // echo "<tr>";
-            // echo "<td>{$row["id"]}</td>";
-            // echo "<td>{$row['name']}</td>";
-            // echo "<td>{$row['phone']}</td>";
-            // echo "<td>{$row['email']}</td>";
-            // echo "</tr>";
-
-        // }
-        # https://github.com/a19860101/ntust
-    ?>
     <?php foreach($row as $r){ ?>
         <tr>
             <td><?php echo $r["id"];?></td>
