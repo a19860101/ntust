@@ -1,15 +1,11 @@
 <?php
     class Student {
         public $a = 100;
-        public $b;
+        public $b = 99;
         function test(){
-            echo "hello";
+            return $this->a + $this->b;
         }
     }
 
     $test = new Student;
-    echo $test->b = 999;
-    echo $test->test();
-    $test2 = new Student;
-    echo $test->b = 123123123;
     echo $test->test();
